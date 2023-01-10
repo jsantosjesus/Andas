@@ -1,0 +1,208 @@
+
+
+.icones i {
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.icones i:hover {
+    opacity: 0.5;
+}
+
+.div-banner{
+    margin-left: 7%;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    height: 100%;
+
+}
+
+.div-banner h1{
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 7.5rem;
+    color: white;
+
+}
+
+.div-banner button {
+    width: 180px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.botao-banner:hover {
+    opacity: 0.5;
+}
+
+.botao-close-carrinho{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#carrinho-poupup{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    min-width: 500px;
+}
+
+
+#titulo-carrinho{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    position: absolute;
+    left: 40%;
+    top: 5px;
+}
+
+.nome-produto{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:1.5rem;
+    margin-left: 10%;
+}
+
+.carrinho-produtos-content{
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+
+
+#preco-produto-carrinho{
+    font-size: 1rem;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    
+}
+
+.quantidade-produtos-carrinho{
+    display: flex;
+    position: absolute;
+    top: 50px;
+    left:20%; 
+}
+
+.quantidade-produtos-carrinho button{
+    background-color: #49444b;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+
+} 
+
+.quantidade-produtos-carrinho button:hover{
+    opacity: 0.5;
+}
+
+.quantidade-produtos-carrinho button, p, i{
+    margin-left: 30px;
+}
+
+.lixo{
+    cursor: pointer;
+    color: #49444b;
+}
+
+.lixo:hover{
+    opacity: 0.5;
+}
+
+.pesquisa{
+    text-align: center;
+    background-color: #49444b;
+    width: 90%;
+    height: 40%;
+    position: relative;
+    top: 0;
+    left: 5%;
+    border-radius: 0px 0px 10px  10px;
+}
+
+.pesquisa h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    padding: 10px 0px;
+    color: white;
+}
+
+.pesquisa input{
+    background-color: transparent;
+    border: 3px solid white;
+    border-color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: 20px 0px;
+    width: 50%;
+    height:40px;  
+}
+
+.pesquisa button{
+    background-color: transparent;
+    border: 3px solid white;
+    width: 100px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+
+.pesquisa button:hover{
+    background-color: white;
+    opacity: 0.8;
+    color: #49444b;
+}
+
+
+/* carroussel */
+
+.carousel-control-prev, .carousel-control-next{
+    background-color: transparent;
+    border: none;
+}
+
+.carousel-control-prev span, .carousel-control-next span{
+    color: black;
+}
+
+@media screen and (min-width: 576px) {
+    carousel-inner{
+        display: flex;
+    }
+    
+    carousel-item{
+        display:block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/3);
+    }
+}
+
+.carousel-inner{
+    padding: 1rem;
+}
+
+.card{
+    margin: 0.5em;
+    width: 30%;
+}
+
+.carousel-item active{
+    display: flex;
+}
+
+
+

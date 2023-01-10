@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/82fd339cc1.js" crossorigin="anonymous"></script>
+
+    <title>Andas</title>
+</head>
+
+<body onload="listarProdutos()">
+    <nav class="navbar fixed-top menu">
+        <a href="index.html"><img src="imagens/andas logo.png" height="100px"></a>
+        <a class="text-white" href="masculinas.html">MASCULINAS</a>
+        <a class="text-white" href="femininas.html">FEMININAS</a>
+        <a class="text-white" href="infantis.html">INFANTIS</a>
+        <nav class="icones">
+            <i class="fa-solid fa-magnifying-glass text-white"></i>
+            <i class="fa-solid fa-user text-white"></i>
+            <i class="fa-solid fa-cart-shopping text-white" data-bs-toggle="modal" data-bs-target="#CarrinhoModal" onclick="listarProdutosCarrinho()"></i>
+        </nav>
+    </nav>
+
+    <img src="imagens/banner(1).png" width="100%" height="80%">
+    <div class="div-banner">
+        <h1>Personalize a sua camiseta</h1>
+        <button class="botao-banner">POR AQUI</button>
+    </div>
+    
+    <div id="CarrinhoModal" class="modal fade">
+        <div class="modal-dialog" id="carrinho-poupup">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="titulo-carrinho">Carrinho</h3>
+                    <button type="button" class="botao-close-carrinho" data-bs-dismiss="modal">x</button>
+                </div>
+                <div class="modal-body">
+                    <div id="carrinho-produtos"></div>
+                    <button onclick="adicionar()">click</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pesquisa">
+        <h1>Já sabe o que quer?</h1>
+        <form>
+            <input type="search" placeholder="Busque aqui" required><br>
+            <button class="btn">Buscar</button>
+        </form>
+    </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+   <button class="btn" onclick="alertaCarrinho()">alerta</button>
+
+    <!-- caroussel -->
+    <!-- <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card">
+              <div class="img-wrapper">
+                <img src="/imagens/produtos/p1.webp" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Card title1</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card" >
+                <div class="img-wrapper">
+                <img src="/imagens/produtos/p2.webp" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Card title2</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card" >
+                <div class="img-wrapper">
+                <img src="/imagens/banner.png" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Card title3</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+        <div class="carousel slide">
+          <div class="carousel-inner" id="divProdutos"></div>
+        </div>
+
+       
+</body>
+
+</html>
