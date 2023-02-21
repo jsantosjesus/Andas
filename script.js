@@ -1,7 +1,7 @@
 
 let carrinho = JSON.parse(localStorage.getItem("carrinho"));
 if (carrinho == null) {
-    carrinho = [];
+    carrinho = []
 }
 let produtos = [
 
