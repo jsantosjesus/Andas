@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/quemSomos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem somos</title>
+</head>
+<body>
+    <!-- menu -->
+
+  <nav id="menu" class="navbar fixed-top menu">
+    <a href="index.html"><img src="imagens/andas logo.png" height="100px"></a>
+    <a class="text-white" href="masculinas.html">MASCULINAS</a>
+    <a class="text-white" href="femininas.html">FEMININAS</a>
+    <a class="text-white" href="infantis.html">INFANTIS</a>
+    <nav class="icones">
+      <i class="fa-solid fa-magnifying-glass text-white" data-bs-toggle="modal" data-bs-target="#pesquisaModal"></i>
+      <i class="fa-solid fa-user text-white" data-bs-toggle="modal" data-bs-target="#modalLoginForm"></i>
+      <i class="fa-solid fa-cart-shopping text-white" data-bs-toggle="modal" data-bs-target="#CarrinhoModal"
+        onclick="listarProdutosCarrinho()"></i>
+    </nav>
+  </nav>
+
+
+  <!-- carrinho -->
+
+  <div id="CarrinhoModal" class="modal">
+    <div class="modal-dialog" id="carrinho-poupup">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="titulo-carrinho">Carrinho</h3>
+          <button type="button" class="botao-close-carrinho" data-bs-dismiss="modal">x</button>
+        </div>
+        <div class="modal-body">
+          <div id="carrinho-produtos"></div>
+          <a id="mudandoLinkCarrinho" href="/checkout/html/DadosPessoais.html"><button class="finalizarCompra">FINALIZAR COMPRA</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- pesquisa poupup -->
+
+  <div id="pesquisaModal" class="modal">
+    <div class="modal-dialog">
+      <div id="pesquisaModal-content"class="modal-content">
+      <div class="modal-header" id="pesquisaPoupup">
+        <form>
+        <input type="search" placeholder="Pesquise aqui!">
+        <a href="loja.html"><button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button></a>
+      </form>
+    </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- login -->
+
+  <div class="modal fade" id="modalLoginForm"  role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-contentLogin">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Fazer Login</h4>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+
+      <form>
+      <div class="submit-line">
+        <i class="submit-lente">
+          <i class="fas fa-envelope prefix grey-text"></i>
+        </i>
+        <input type="text" placeholder="Seu e-mail" required>
+       
+      </div>
+
+      <div class="submit-line">
+        <i class="submit-lente">
+          <i class="fas fa-lock prefix grey-text"></i>
+        </i>
+        <input type="password" placeholder="Senha" required>
+       
+      </div>
+      <input type="checkbox"> Lembrar de mim
+      
+
+      </div>
+      <div class="d-flex justify-content-center">
+        <button class=" btnLogin">Entrar</button>
+      </form>
+        <button class=" btnSingup"  data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#modalLogupForm">Cadastrar-se</button>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- cadastro poupup -->
+
+<div class="modal fade" id="modalLogupForm"  role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-contentLogin">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Cadastro</h4>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+
+      <form>
+        <div class="submit-line">
+          <i class="submit-lente">
+            <i class="fa-solid fa-user"></i>
+          </i>
+          <input type="name" placeholder="Seu nome" required>
+         
+        </div>
+      <div class="submit-line">
+        <i class="submit-lente">
+          <i class="fas fa-envelope prefix grey-text"></i>
+        </i>
+        <input type="email" placeholder="Seu e-mail" required>
+       
+      </div>
+
+      <div class="submit-line">
+        <i class="submit-lente">
+          <i class="fas fa-lock prefix grey-text"></i>
+        </i>
+        <input type="password" placeholder="Senha" required>
+       
+      </div>
+      <div class="submit-line">
+        <i class="submit-lente">
+          <i class="fas fa-lock prefix grey-text"></i>
+        </i>
+        <input type="password" placeholder="Repetir senha" required>
+       
+      </div>
+      <input type="checkbox"> Lembrar de mim
+      
+
+      </div>
+      <div class="d-flex justify-content-center">
+        <button class=" btnLogin">Confirmar</button>
+      </form>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+    <main class="body">
+        <div class="historia">
+            <div class="historia-para">
+                <h2>Hístoria</h2>
+                <p>Fundada nos anos 2000 a Andas surgiu com um ideia inovadora de não só vender camisas como também e o primeiro site com personalização das mesmas, essa estratégia e sim a marca registrada da Andas. Assim como todas as empresas visámos crescimento logico que somos 
+                    um empresa recente no mercado mais estamos em constante mudanças, e não vamos nos deixar abalar por qual que dificuldade essas são as palavras do próprio dono.</p>
+            </div>
+        </div>
+        <div class="objetivo">
+            <div class="objetivo-para">
+                <h2>Objetivo</h2>
+                <p>Comesamos com a inteção de vender nossos produtos para um publíco mais central, mais com a chegada de novas tecnologias temos a ideia de que precisamos evoluir junto com o mercado, focando assim em um publíco mais disperço por todo o Brasil.</p>
+            </div>
+        </div>
+        <div class="complemento">
+            <div class="posicao">
+                <div class="complemento1">
+                    <h2>Quem Somos?</h2>
+                    <p>Somos uma empresa que visa crescimento, e que o cliente se sinta a vontade no nosso site</p>
+                </div>
+                <div class="complemento2">
+                    <h2>O que fazemos?</h2>
+                    <p>Nós esforçamos para trazer a melhor experiencia que um usuario pode ter no nosso site</p>
+                </div>
+                <div class="complemento3">
+                    <h2>Como Trabalhamos?</h2>
+                    <p>Nossa equipe e formada por proficionais de qualidade que constatimente vem preparando novos scripts e novas atualizações</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

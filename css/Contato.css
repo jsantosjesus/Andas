@@ -1,0 +1,50 @@
+@font-face {
+    font-family: garet;
+    src: url(/fontes/Garet-Book.otf);
+}
+
+body{
+    font-family: garet;
+}
+
+.posicao{
+    background-color: #49444b;
+    color: aliceblue;
+    width: 1000px;
+    height: 500px;
+    margin-left: 250px;
+    margin-top: 100px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.CPosicao{
+    text-align: center;
+    align-items: center;
+}
+
+.inputDentro{
+    padding: 0 50px;
+    padding-top: 20px;
+    color: aliceblue !important;
+}
+
+/* .inputDentro::placeholder{
+    color: aliceblue !important;
+} */
+
+.btnEnviar{
+    background-color: black;
+    padding: 10px;
+    color: white;
+    font-family: garet;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+.btnEnviar:hover{
+    opacity: 0.8;
+}
+
+
