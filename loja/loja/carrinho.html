@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+    <h1>Carrinho</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody id="tblProdutos"></tbody>
+    </table>
+
+    <p id="pTotal">Total: R$ 0,00</p>
+
+    <script>
+        let carrinho = JSON.parse(localStorage.getItem("carrinho"));
+        if (carrinho == null) {
+            carrinho = [];
+        }
+
+        function listarProdutos() {
+            let total = 0;
+            let subtotal = 0;
+
+            tblProdutos.innerHTML = "";
+            for (let i = 0; i < carrinho.length; i++) {
+                subtotal = carrinho[i].preco * carrinho[i].quantidade;
+                total += subtotal;
+                tblProdutos.innerHTML += `<tr>
+                        <td>
+                            <button onclick="excluirProduto(${i})">X</button>
+                            ${carrinho[i].nome}
+                        </td>
+                        <td>R$ ${carrinho[i].preco.toFixed(2)}</td>
+                        <td>
+                            <button onclick="alterarQuantidade(${i}, -1)">-</button>
+                            ${carrinho[i].quantidade}
+                            <button onclick="alterarQuantidade(${i}, +1)">+</button>
+                        </td>
+                        <td>R$ ${subtotal.toFixed(2)}</td>
+                    </tr>`;
+            }
+            pTotal.innerHTML = "Total: R$ " + total.toFixed(2);
+        }
+
+        function alterarQuantidade(indice, valor) {
+            carrinho[indice].quantidade += valor;
+            if (carrinho[indice].quantidade <= 0) {
+                carrinho[indice].quantidade = 1;
+            }
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+            listarProdutos();
+        }
+
+        function excluirProduto(indice) {
+            if (confirm(`Você realmente quer excluir o produto ${carrinho[indice].nome} do seu carrinho?`)) {
+                carrinho.splice(indice, 1);
+                localStorage.setItem("carrinho", JSON.stringify(carrinho));
+                listarProdutos();
+            }
+        }
+
+
+
+        listarProdutos();
+    </script>    
+</body>
+</html>

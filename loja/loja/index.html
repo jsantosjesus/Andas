@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        .divProduto {
+            width: 200px;
+            border: solid 1px gray;
+            border-radius: 10px;
+            overflow: hidden;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .divProduto img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Bem-vindo à minha loja!</h1>
+
+    <div id="divProdutos"></div>
+
+    <script>
+        let carrinho = JSON.parse(localStorage.getItem("carrinho"));
+        if (carrinho == null) {
+            carrinho = [];
+        }
+
+        let produtos = [
+            { 
+              nome:   "Sal",
+              imagem: "http://conteudo.imguol.com.br/c/entretenimento/7a/2018/03/16/que-tal-maneirar-no-sal-1521221433283_v2_1920x1280.jpg",
+              preco:  1.50
+            },
+            { 
+                nome:   "Carvão",
+                imagem: "https://imagens.mfrural.com.br/mfrural-produtos-us/235437-308219-2338239-carvao.jpg",
+                preco:  5.50
+            },
+            { 
+                nome:   "Carne",
+                imagem: "https://cdn.folhape.com.br/img/pc/1100/1/dn_arquivo/2022/02/carne1.jpg",
+                preco:  42.00
+            },
+            {   
+                nome:   "Cerveja sem álcool",
+                imagem: "https://trimais.vteximg.com.br/arquivos/ids/1000774-1000-1000/foto_original.jpg",
+                preco:  3.00
+            },
+            { 
+                nome:   "Gelo",
+                imagem: "https://adonaiembalagens.com.br/wp-content/uploads/2020/01/GELO-2.jpeg",
+                preco:  12.00
+            }
+        ];
+
+        function listarProdutos() {
+            divProdutos.innerHTML = "";
+            for (let i = 0; i < produtos.length; i++) {
+                divProdutos.innerHTML += `<div class="divProduto">
+                        <img src="${produtos[i].imagem}">
+                        <h3>${produtos[i].nome}</h3>
+                        <p>R$ ${produtos[i].preco.toFixed(2).replace(".", ",")}</p>
+                        <button onclick='adicionarProduto(${ JSON.stringify(produtos[i]) })'>Adicionar ao Carrinho</button>
+                    </div>`;
+            }
+        }
+
+        function adicionarProduto(produto) {
+            let encontrado = false;
+            for (let i = 0; i < carrinho.length; i++) {
+                if (carrinho[i].nome == produto.nome) {
+                    carrinho[i].quantidade++;
+                    encontrado = true;
+                    break;
+                }
+            }
+            if (!encontrado) {
+                produto.quantidade = 1;
+                carrinho.push( produto );
+            }
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        }
+
+
+        listarProdutos();
+    </script>
+
+</body>
+</html>

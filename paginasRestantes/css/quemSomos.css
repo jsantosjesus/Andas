@@ -1,0 +1,73 @@
+.body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+.historia{
+    background-color: aliceblue;
+    width: 700px;
+    height: 300px;
+    display: inline-block;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 2px;
+}
+
+.objetivo{
+    width: 700px;
+    background-color: #49444b;
+    color: white;
+    height: 300px;
+    display: inline-block;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 2px;
+}
+
+.objetivo-para{
+    width: 350px;
+    padding: 50px;
+    padding-top: 60px;
+    padding-left: 150px;
+}
+
+.historia-para{
+    width: 90%;
+    padding-top: 60px;
+    padding-left: 5%;
+}
+
+.complemento{
+    background-color: transparent;
+    height: 400px;
+}
+
+.posicao{
+    margin-left: 100px;
+}
+
+.complemento1{
+    display: inline-block;
+    background-color: rgb(175, 175, 175);
+    margin-top: 100px;
+    width: 300px;
+    box-shadow: 10px 5px 5px black;
+    border-radius: 2px;
+}
+
+.complemento2{
+    display: inline-block;
+    background-color: rgb(175, 175, 175);
+    margin-left: 200px;
+    width: 300px;
+    box-shadow: 10px 5px 5px black;
+    border-radius: 2px;
+}
+
+.complemento3{
+    display: inline-block;
+    background-color: rgb(175, 175, 175);
+    margin-left: 200px;
+    width: 300px;
+    box-shadow: 10px 5px 5px black;
+    border-radius: 2px;
+}

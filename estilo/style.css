@@ -1,0 +1,811 @@
+@font-face {
+    font-family: hertical;
+    src: url(/fontes/HerticalSansRough.otf);
+ }
+
+ @font-face {
+    font-family: garet;
+    src: url(/fontes/Garet-Book.otf);
+ }
+
+ @font-face {
+    font-family: bogart;
+    src: url(/fontes/Bogart-Regular-trial.ttf);
+ }
+
+ 
+/* menu */
+
+ .menu a, .menuOutrasP a{
+    font-family: hertical;
+    font-size: 1.5rem;
+    
+ }
+
+
+.icones i {
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.icones i:hover {
+    opacity: 0.5;
+}
+
+@media (max-width: 685px){
+    .menu a, .menuOutrasP a{
+        font-size: 1rem;
+    } 
+
+    .modal-body{
+        max-height: 300px;
+    }
+}
+/* banner */
+
+.div-bannerr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-banner{
+    position: absolute;
+    top: 50vh;
+    text-align: center;
+    width: 100%;
+
+}
+
+.div-banner h1{
+    
+    font-family: bogart;
+    font-size: 7.5rem;
+    color: #49444b;
+
+}
+
+
+
+.div-banner button {
+    font-family: garet;
+    width: 15%;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.botao-banner:hover {
+    opacity: 0.5;
+}
+
+@media (max-width: 685px){
+
+    .div-banner{
+        top:30vh;
+    }
+    .div-banner h1{
+        font-size: 4rem;
+    }
+
+    .div-banner button{
+        font-size: 10px;
+    }
+
+}
+
+/* carrinho */
+
+.botao-close-carrinho{
+    font-family: bogart;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.modal-content{
+    height: 100vh;
+}
+
+#carrinho-poupup{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    min-width: 500px;
+    
+}
+
+
+#titulo-carrinho{
+    font-family: bogart;
+    font-size: 3rem;
+    position: absolute;
+    left: 40%;
+    top: 5px;
+}
+
+.nome-produto{
+    font-family: bogart;
+    font-size:1.5rem;
+    margin-left: 10%;
+}
+
+.carrinho-produtos-content{
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#preco-produto-carrinho{
+    font-size: 1rem;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    
+}
+
+.quantidade-produtos-carrinho{
+    display: flex;
+    position: absolute;
+    top: 50px;
+    left:20%; 
+}
+
+.quantidade-produtos-carrinho button{
+    background-color: #49444b;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+
+} 
+
+.quantidade-produtos-carrinho button:hover{
+    opacity: 0.5;
+}
+
+.quantidade-produtos-carrinho button, p, i{
+    margin-left: 30px;
+}
+
+.lixo{
+    cursor: pointer;
+    color: #49444b;
+    margin-left: 30px;
+}
+
+.lixo:hover{
+    opacity: 0.5;
+}
+
+.divSubtotal{
+    font-family: garet;
+    width: 100%;
+    text-align: end;
+    padding: 20px;
+}
+
+
+.finalizarCompra{
+    font-family: garet;
+    background-color: black;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left: 12vw;
+
+}
+
+.finalizarCompra:hover{
+    opacity: 0.5;
+}
+
+#divProdutos .pdt, .produtosLojaIndex .pdt, .produtosLojaMasculinas .pdt {
+    font-style: oblique;
+    font-family: garet;
+    display: inline-block;
+    margin: 10px 10px;
+    
+}
+
+#divProdutos .pdt img, .produtosLojaMasculinas .pdt img, .produtosLojaIndex .pdt img{
+    width: 400px;
+    max-height:400px ;
+   
+}
+
+@media (max-width: 685px){
+    #divProdutos .pdt img, .produtosLojaMasculinas .pdt img, .produtosLojaIndex .pdt img{
+        width: 200px;
+        max-height:200px ;
+       
+    } 
+    .dentroImagemCarrossel{
+    position: absolute;
+    top: 0px;
+    padding: none;
+    
+}
+
+}
+
+#divProdutos .pdt button, .produtosLojaMasculinas .pdt button, .produtosLojaIndex .pdt button{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+#divProdutos .pdt button:hover, .produtosLojaMasculinas .pdt button:hover, .produtosLojaIndex .pdt button:hover{
+   background-color: #49444b;
+   border:none;
+}
+
+.imagemCarrossel{
+    position: relative;
+}
+
+.dentroImagemCarrossel{
+    background-color: rgba(255, 255, 255, 0.5);
+    position:absolute;
+    top: 230px;
+    width: 100%;
+    align-items: center;
+    padding: 30px;
+    
+}
+
+#imgcarrinho{
+    height: 75px !important;
+    width: 75px !important;
+}
+
+
+
+/* Pesquisa */
+
+.pesquisa{
+    text-align: center;
+    background-color: #49444b;
+    width: 90%;
+    height: 40%;
+    position: relative;
+    top: 0;
+    left: 5%;
+    border-radius: 0px 0px 10px  10px;
+    padding-bottom: 10px;
+}
+
+.pesquisa h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    padding: 10px 0px;
+    color: white;
+}
+
+.pesquisa input{
+    background-color: transparent;
+    border: 3px solid white;
+    border-color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: 20px 0px;
+    width: 50%;
+    height:40px;  
+}
+
+.pesquisa button, .divFiltro button{
+    background-color: transparent;
+    border: 3px solid white;
+    width: 100px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+
+.pesquisa button:hover, .divFiltro button:hover{
+    background-color: white;
+    opacity: 0.8;
+    color: #49444b;
+}
+
+.pesquisa a{
+    text-align: center;
+    color: white;
+}
+
+.pesquisa a:hover{
+    color: white;
+}
+
+/* carrossel */
+
+
+#inextcarrossel, #iprevcarrossel{
+    font-size: 40px !important;
+    color: #49444b;
+    cursor: pointer;
+   
+}
+
+#inextcarrossel:hover, #iprevcarrossel:hover{
+    opacity: 0.5;
+}
+
+.tituloCategorias{
+    font-family: hertical;
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.carrousselCompeto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* filtro */
+
+.divFiltro{
+    font-family: garet;
+    text-align: center;
+    align-items: center;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 30px;
+    background-color: #49444b;
+    border-radius: 0px 0px 20px 20px;
+    color: white;
+}
+
+.divFiltro h1{
+    font-family: bogart;
+   margin-bottom: 20px;
+   padding-top: 20px;
+}
+
+.filtroUm{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+
+}
+
+.filtroUm p{
+    border: solid 2px transparent;
+    border-radius: 4px;
+    padding: 0px 3px;
+}
+
+.filtroUm p:hover{
+    border-color: white;
+}
+
+/* lançamentos */
+
+.lancamentosH1{
+    font-size: 3.5rem;
+    font-family: bogart;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.divlancamentoUm{
+    height: 100vh;
+    display: flex;
+}
+
+.lancamentoUmImg{
+    width: 50vw;
+}
+
+
+.lancamentoUmImg img{
+    height: auto;
+    width: 50vw;
+}
+
+.lancamentoUmtexto{
+    font-family: bogart;
+    width: 50vw;
+    text-align: center;
+    
+}
+
+.lancamentoUmtexto button{
+    border-radius: 0;
+    font-family: garet;
+    background-color: black;
+    padding: 10px 30px;
+}
+
+.lancamentoUmtexto h1{
+    margin-top: 50%;
+    font-size: 4rem;
+}
+
+.lancamentoUmtexto p{
+    font-size: 1.5rem;
+}
+
+
+#btnRed{
+    background-color: #e5433e;
+    color: white;
+}
+
+#btnRed:hover{
+    opacity: 0.8;
+}
+
+/* loja index */
+
+.produtosLojaIndex, .produtosLojaMasculinas{
+    text-align: center;
+}
+
+.h3LojaIndex{
+    font-family: hertical;
+    color: black;
+    text-align: center;
+    margin: 100px 0px 10px 0px;
+}
+
+.divPbtnMostrarMais{
+    font-family: garet;
+    text-align: center !important;
+    margin-top: 20px;
+}
+
+.btnPreto{
+    border-radius: none !important;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.btnPreto:hover{
+    opacity: 0.8;
+}
+
+/* footer */
+
+.footer{
+    background-color: black;
+}
+
+.footer a{
+    color: white;
+}
+
+.btnNewlestter{
+    background-color: #49444b;
+    
+}
+
+.btnNewlestter:hover{
+    opacity: 0.8;
+}
+
+.d-flex{
+    margin-top: 20px;
+}
+
+/* pesquisa poupup */
+
+#pesquisaPoupup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+}
+
+#pesquisaPoupup button{
+    align-items: center;
+    padding:10px 30px;
+}
+
+#pesquisaPoupup button:hover{
+    opacity: 0.9;
+}
+
+#pesquisaModal-content{
+  height: 0px;
+  box-shadow: 0;
+  border: 0;
+}
+
+#pesquisaPoupup i{
+    margin-left: 0;
+    font-size: 15px;
+} 
+
+#pesquisaPoupup input{
+    width: 30vw;
+    padding: 10px;
+    background-color: transparent;
+    font-family: hertical;
+    color: white;
+    border: solid 2px white;
+    border-radius: 5px;
+}
+
+#pesquisaPoupup input::-webkit-input-placeholder{
+    color:white;
+}
+
+/* login poupup */
+
+.modal-contentLogin {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+.modal-contentLogin h4{
+    font-family: hertical;
+}
+
+.submit-lente {
+    position:absolute;
+    top:0; left:0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border:none;
+    background:transparent;
+    outline:none;
+  }
+
+  .submit-lente input, i{
+    margin-left: 0;
+  }
+
+  
+  .submit-line {
+    position: relative;
+  
+  }
+  
+  .submit-line input {
+    width: 100%;
+    padding: 15px 15px 15px 40px;
+    background-color: #f4f8f7;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 6px;
+    
+  }
+
+  .btnLogin{
+    background-color: black;
+    color: white;
+  }
+
+  .btnLogin, .btnSingup{
+    padding: 10px 25px;
+    border-radius: none;
+    margin: 0px 20px 20px 20px;
+    cursor: pointer;
+    font-family: garet;
+  }
+
+  .btnSingup{
+    color: black;
+    border-color: black;
+  }
+
+  .btnLogin:hover{
+    opacity: 0.8;
+  }
+
+  .btnSingup:hover{
+    color: white;
+    background-color: black;
+  }
+
+
+
+/* pagina personalize */
+
+  .menuOutrasP{
+    background-color: black;
+    position: fixed;
+    top: 0;
+  }
+
+  /* categorias */
+
+  .categoriasPersonalize{
+    display: flex;
+    padding-top: 20px;
+    box-shadow: 0 0 6px 0;
+  }
+
+  .categoriasPersonalizeAtiva{
+    border-bottom: solid 3px black;
+  }
+   
+
+  .categoriasPersonalize a{
+    font-family: garet;
+    margin-right: 30px;
+    margin-left: 30px;
+    color: black;
+  }
+
+  .categoriasPersonalize a:hover{
+    text-decoration: none;
+    border-bottom: solid 3px black;
+    color: black;
+  }
+
+/* div personalizar */
+
+  .divPaiPersonalizar{
+    background-color: #f4f2f1;
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .imagemPersonalizar{
+    width: 50vw;
+    height: auto;
+    position: relative;
+  }
+
+  .imagemPersonalizar img{
+    width: 50vw;
+    height: auto;
+
+  }
+
+
+  .opcoesDePersonalizar{
+    justify-content: center;
+    text-align: center;
+    width: 50vw;
+    font-family: borat;
+    
+  }
+
+  #opcoesDePersonalizarFilho1{
+    margin-top: 30px;
+  }
+
+  .opcoesPersonalizarFilho{
+    border: solid 1px #49444b;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.477);
+    border-radius: 6px;
+    margin: 8px;
+    text-align: left;
+    margin-top: 20px ;
+    margin-bottom: 10px;
+  }
+
+  .opcoesPersonalizarFilho h4{
+    margin-left: 10px;
+    margin-top: 5px;
+
+  }
+
+  .escolherCorPersonalizar{
+    display: flex;
+    justify-items: center;
+    width: 100%;
+    align-items: center;
+  }
+
+  .escolherCorPersonalizar .preto, .escolherCorPersonalizar .branco{
+    border: solid 1px black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 15px 10px;
+    cursor: pointer;
+  }
+
+  .escolherCorPersonalizar .preto{
+    background-color: black;
+  }
+
+  .escolherCorPersonalizar .branco{
+    background-color: white;
+  }
+
+  .escolherLocalPersonalizar button, .escolherTamanhoPersonalizar button, .escolherModeloPersonalizar button{
+    margin: 15px 10px;
+    font-family: garet;
+  }
+
+  .finalizarPersonalizacao{
+    background-color: black;
+    font-family: garet;
+    width: 95%;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom:20px;
+    cursor: pointer;
+  }
+
+  .finalizarPersonalizacao:hover{
+    opacity: 0.8;
+  }
+
+
+  #foo {
+    position:absolute;
+    z-index: 1000;
+    width: 250px;
+    height: 250px;
+    top: 20%;
+    left: 40%;
+    align-items: center;
+}
+
+.isMoving {
+   z-index: 1001 !important;
+}
+
+#estampa{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: auto;
+}
+
+#ran::-moz-range-progress{
+    background-color: rgb(100, 100, 100);
+}
+
+#ran{
+    width: 100%;
+    height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
